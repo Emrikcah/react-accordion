@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+   --font-family: " Roboto ", sans-serif;
+
+   --color-bg: #4b145b;
+   --color-icon: #cf8aa1;
+   --color-text: #102a42;
+   --clr-grey-5: #617d98;
+   --clr-grey-3: #324d67;
+   --color-iconContainer: #eae6eb;
+   --color-white: #fff;
+   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+   --radius: .30rem;
+   --max-width: 1440px;
+   --fixed-width: 920px;
+}

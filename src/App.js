@@ -1,5 +1,5 @@
 import { Questions } from "./components";
-import data from './data/data';
+import data from "./data/data";
 
 import "./App.css";
 
@@ -8,8 +8,9 @@ function App() {
       <main>
          <div className="container">
             <h3>questions and answers about login</h3>
-
-            <Questions data={data} />
+            <section>
+              <Questions data={data} />
+            </section>
          </div>
       </main>
    );
