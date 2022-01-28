@@ -3,7 +3,7 @@ import {AiOutlineMinus,AiOutlinePlus} from 'react-icons/ai';
 import "./questions.css";
 
 const Questions = ({ data }) => {
-   const [questions, setQuestions] = useState(data);
+   const [questions] = useState(data);
    const [isShown, setIsShown] = useState(false);
 
    return (
