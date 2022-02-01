@@ -5,11 +5,16 @@ import "./questions.css";
 const Questions = ({ data }) => {
    const [questions, setQuestions] = useState(data);
    const [isShown, setIsShown] = useState(false);
+   const [shownId, setShownId] = useState();
 
    
    const toggle = (id) => {
       setIsShown(isShown => !isShown)
-      console.log(questions[id-1]);
+      if (!isShown) {
+         setShownId(id);
+      }else{
+         setShownId(0);
+      }
       
    }
 
@@ -17,6 +22,7 @@ const Questions = ({ data }) => {
       <>
          {questions.map((question) => {
             const { id, title, info } = question;
+            
             return (
                <article key={id} className="question">
                   <header className="question_header">
@@ -25,7 +31,7 @@ const Questions = ({ data }) => {
                      {isShown ? <AiOutlineMinus/> : <AiOutlinePlus/>}
                   </button>
                   </header>
-                  {isShown && <p className="question_p">{info}</p>}
+                  {shownId === id && <p className="question_p">{info}</p>}
                </article>
             );
          })}
